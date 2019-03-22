@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 
@@ -10,26 +13,39 @@
     <link rel="stylesheet" href="../css/index.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
-<script src="../js/nav.js"></script>
+
+<?php
+if ($_SERVER['REQUEST_METHOD'] == 'POST')
+{
+    if (isset($_POST['login'])) { //user logging in
+
+        require 'login.php';
+        
+    }
+    elseif (isset($_POST['register'])) { // user registering
+        require 'register.php';
+    }
+}
+?><script src="../js/nav.js"></script>
 
 <body>
     <div class="topnav">
         <a href="#home" class="active">Logo</a>
         <div id="links">
-            <a href="#Home">Home</a>
-            <a href="#About">About</a>
-            <a href="#Companies">Companies</a>
-            <a href="#Portfolio">Portfolio</a>
-            <a href="#Profile">Profile</a>
-            <a href="#Favourites">Favourites</a>
-            <a href="#login">Login</a>
-            <a href="#Logout">Logout</a>
-            <a href="#Sign Up">Sign Up</a>
+            <a href="index.php">Home</a>
+            <a href="about.php">About</a>
+            <a href="companies.php">Companies</a>
+            <a href="portfolio.php">Portfolio</a>
+            <a href="profile.php">Profile</a>
+            <a href="favourites.php">Favourites</a>
+            <a href="logout.php">Logout</a>
+
         </div>
         <a class="icon">
             <i class="fa fa-bars"></i>
         </a>
     </div>
+    
     <form action="index.php" method="post" autocomplete="off">
         <div>
             <label>
@@ -51,17 +67,42 @@
 
     </form>
 
-    <div>
-        <h1>About</h1>
-    </div>
+    <form action="index.php" method="post" autocomplete="off">
 
-    <div class="links">
-        <h2>Zephaniah Monette:  <a href= "https://github.com/zephmonette">Link to my Github</a></h2>
-        <h2>Tristen Meilleur: <a href='https://github.com/tmeil781'>Link to my Github</a></h2>
-        <h2>Bryce Baker: <a href= "github go here">Link to my Github</a></h1>
-        <h2>Paulina Wynter: <a href= "https://github.com/paulinawynter">Link to my Github</a></h1>
-        <h2> <a href= "https://github.com/zephmonette/Assignment2">Link to our Github Repository</a></h2>
-    </div>
+        <div>
+            <div>
+                <label>
+                    First Name<span class="req">*</span>
+                </label>
+                <input type="text" required autocomplete="off" name='firstname' />
+            </div>
+
+            <div>
+                <label>
+                    Last Name<span class="req">*</span>
+                </label>
+                <input type="text" required autocomplete="off" name='lastname' />
+            </div>
+        </div>
+
+        <div>
+            <label>
+                Email Address<span class="req">*</span>
+            </label>
+            <input type="email" required autocomplete="off" name='email' />
+        </div>
+
+        <div>
+            <label>
+                Set A Password<span class="req">*</span>
+            </label>
+            <input type="password" required autocomplete="off" name='password' />
+        </div>
+
+        <button type="submit" class="button button-block" name="register" />Register</button>
+
+    </form>
+
 
 </body>
 
