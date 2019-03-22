@@ -1,4 +1,4 @@
-<?php
+  <?php
 session_start();
 ?>
 <!DOCTYPE html>
@@ -26,8 +26,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
         require 'register.php';
     }
 }
-?><script src="../js/nav.js"></script>
-
+?>
+<script src="../js/nav.js"></script>
+<script src="../js/form.js"></script>
 <body>
     <div class="topnav">
         <a href="#home" class="active">Logo</a>
@@ -87,6 +88,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 
         <div>
             <label>
+                City<span class="req">*</span>
+            </label>
+            <input type="text" required autocomplete="off" name='city' />
+        </div>
+        
+        <div>
+            <label>
+                Country<span class="req">*</span>
+            </label>
+            <input type="text" required autocomplete="off" name='country' />
+        </div>
+
+        <div>
+            <label>
                 Email Address<span class="req">*</span>
             </label>
             <input type="email" required autocomplete="off" name='email' />
@@ -96,7 +111,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
             <label>
                 Set A Password<span class="req">*</span>
             </label>
-            <input type="password" required autocomplete="off" name='password' />
+            <input type="password" required autocomplete="off" name='password' id='password'/>
+        </div>
+        
+        <div>
+            <label>
+                Confirm password<span class="req">*</span>
+            </label>
+            <input type="password" required autocomplete="off" name='password' id='confirm_password'/>
+            <span id='message'></span>
         </div>
 
         <button type="submit" class="button button-block" name="register" />Register</button>
