@@ -1,6 +1,6 @@
 window.addEventListener('load', function() {
 
-    window.addEventListener('resize', function() {
+    window.onresize = function() {
         var x = document.getElementById("links");
         if (window.innerWidth <= 640) {
             if (x.style.display === "block") {
@@ -11,7 +11,7 @@ window.addEventListener('load', function() {
                 x.style.display = "block";
             }
         }
-    });
+    };
     
 
     document.querySelector('.icon').addEventListener('click', () => {
