@@ -3,6 +3,15 @@ session_start();
 /* User login process, checks if user exists and password is correct */
 require_once('../data/services/pdo.php');
 
+function shaCheck($pass,$salt,$hash){
+    if(hash(sha256,$pass . $salt) == $hash){
+        return true;
+    }
+    else{
+    return false;
+    }
+}
+
 $email = $_POST['email'];
 
 try {
@@ -19,7 +28,7 @@ header("location: error.php");
 else { // User exists
     $user = $stmt1->fetch(PDO::FETCH_ASSOC);
 
-    if ( password_verify($_POST['password'], $user['password']) ) {
+    if ( password_verify($_POST['password'], $user['password']) && shaCheck($_POST['password'], $user['salt'], $user['password_sha256']) ) {
         
         $_SESSION['email'] = $user['email'];
         $_SESSION['first_name'] = $user['first_name'];
@@ -42,4 +51,6 @@ header("location: error.php");
 catch (PDOException $e) {
  die( $e->getMessage() );
 }
+
+
 ?>

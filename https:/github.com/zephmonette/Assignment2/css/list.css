@@ -1,0 +1,22 @@
+body{
+    background-color: #173F5F;
+}
+
+.smallPic{
+    height: 30px;
+    width: 85px;
+
+}
+
+#itemList{
+        height: 400px;
+    width: 500px;
+    border: 1px solid black;
+    overflow: auto;
+}
+
+#itemList li {
+    border: 1px solid black;
+    height: 50px;
+}
+

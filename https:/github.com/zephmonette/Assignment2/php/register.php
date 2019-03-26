@@ -12,10 +12,10 @@ $city = $_POST['city'];
 $country = $_POST['country'];
 $email = $_POST['email'];
 
-//I have no clue why there is a salt and sha_256 field in the users database so we use blowfish for now
+//Hashing and salting and all that good stuff now works for both bubblefish and sha256 but teachers still uses $2a$12$ function which is old.
 $password = password_hash($_POST['password'], PASSWORD_BCRYPT, ['cost' => 12,]);
-$salt = 0;
-$sha = 0;
+$salt = base64_encode(mcrypt_create_iv(24, MCRYPT_DEV_URANDOM));
+$sha = hash(sha256, $_POST['password'] . $salt);
 
  $pdo = new PDO(DBCONNSTRING,DBUSER,DBPASS);
  $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -34,12 +34,14 @@ header("location: error.php");
  //User doesn't exist so prepare an entry
  else{
      $oldid = $pdo->query('SELECT MAX(id) FROM users');
-     $id = $oldid[0];
-     $id++;
+     $id = $oldid->fetch();
+     
+     $newid = $id[0];
+     $newid++;
      
      $stmt2 = $pdo->prepare("INSERT INTO users (id, firstname, lastname, city, country, email, password, salt, password_sha256) " . "VALUES (:id, :first_name,:last_name,:city, :country, :email,:password, :salt, :sha)");
      
-     $stmt2->bindValue(':id', $id);
+     $stmt2->bindValue(':id', $newid);
      $stmt2->bindValue(':first_name', $first_name);
      $stmt2->bindValue(':last_name', $last_name);
      $stmt2->bindValue(':city', $city);
