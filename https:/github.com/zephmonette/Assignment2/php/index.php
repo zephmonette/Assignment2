@@ -39,7 +39,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
             <a href="portfolio.php">Portfolio</a>
             <a href="profile.php">Profile</a>
             <a href="favourites.php">Favourites</a>
-            <a href="logout.php">Logout</a>
+            <?php
+            require('logoutnav.php')
+            ?>
+            
 
         </div>
         <a class="icon">

@@ -21,7 +21,7 @@ session_start();
         <div id="links">
            <a href="index.php">Home</a>
             <a href="about.html">About</a>
-            <a href="companies.php">Companies</a>
+            <a href="portfolio.php">Portfolio</a>
             <a href="profile.php">Profile</a>
             <a href="favourites.php">Favourites</a>
             <?php
@@ -34,7 +34,7 @@ session_start();
     </div>
         
     <div>
-        <h1>Portfolio</h1>
+        <h1>Companies</h1>
     </div>
     
 </body>

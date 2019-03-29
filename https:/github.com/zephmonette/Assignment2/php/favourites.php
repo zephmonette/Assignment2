@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 
@@ -21,6 +24,9 @@
             <a href="companies.php">Companies</a>
             <a href="portfolio.php">Portfolio</a>
             <a href="profile.php">Profile</a>
+            <?php
+            require('logoutnav.php')
+            ?>
         </div>
         <a class="icon">
             <i class="fa fa-bars"></i>
