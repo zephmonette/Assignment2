@@ -30,28 +30,39 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 <script src="../js/nav.js"></script>
 <script src="../js/form.js"></script>
 <body>
+    <!--
     <div class="topnav">
         <a href="#home" class="active">Logo</a>
         <div id="links">
             <a href="index.php">Home</a>
-            <a href="about.php">About</a>
-            <a href="companies.php">Companies</a>
+            <a href="about.html">About</a>
+            <a href="list.php">Companies</a>
             <a href="portfolio.php">Portfolio</a>
             <a href="profile.php">Profile</a>
             <a href="favourites.php">Favourites</a>
-            <?php
-            require('logoutnav.php')
-            ?>
-            
-
         </div>
         <a class="icon">
             <i class="fa fa-bars"></i>
         </a>
     </div>
+    -->
     
-    <form action="index.php" method="post" autocomplete="off">
+    <div>
+        <h1>Welcome to [ENTER NAME HERE].com</h1>
+    </div>
+    
+    <div class= 'menu'>
+        <button><a href="about.php">About</a></button>
+        <button><a href="list.php">Companies</a></button>
+        <?php
+            require('loginmenu.php')
+        ?>
+    </div>
+    
+    <div id= 'formBox'>
+    <form action="index.php" method="post" autocomplete="off" id= "login">
         <div>
+            <h3>Login: </h3>
             <label>
                 Email Address<span class="req">*</span>
             </label>
@@ -71,9 +82,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 
     </form>
 
-    <form action="index.php" method="post" autocomplete="off">
+    <form action="index.php" method="post" autocomplete="off" id= 'new'>
 
         <div>
+            <h3>Register Here: </h3>
             <div>
                 <label>
                     First Name<span class="req">*</span>
@@ -128,6 +140,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
         <button type="submit" class="button button-block" name="register" />Register</button>
 
     </form>
+    </div>
 
 
 </body>

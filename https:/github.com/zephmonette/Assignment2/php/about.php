@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -16,12 +20,15 @@
     <div class="topnav">
         <a href="#home" class="active">Logo</a>
         <div id="links">
-           <a href="index.php">Home</a>
-            <a href="about.html">About</a>
-            <a href="companies.php">Companies</a>
-            <a href="portfolio.php">Portfolio</a>
-            <a href="profile.php">Profile</a>
-            <a href="favourites.php">Favourites</a>
+            <button><a href="index.php">Home</a></button>
+            <button><a href="about.php">About</a></button>
+            <button><a href="list.php">Companies</a></button>
+            <button><a href="portfolio.php">Portfolio</a></button>
+            <button><a href="profile.php">Profile</a></button>
+            <button><a href="favourites.php">Favourites</a></button>
+            <?php
+            require('logoutnav.php')
+            ?>
         </div>
         <a class="icon">
             <i class="fa fa-bars"></i>
