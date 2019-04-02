@@ -60,6 +60,11 @@ img.addEventListener('mousemove', function(t){
                filter(); 
             });
             
+                        document.getElementById("unfilter").addEventListener('click', function(){
+                
+               unfilter(); 
+            });
+            
 for(let p of pre){
     console.log(p);
     p.style.display = "";
@@ -123,3 +128,9 @@ function filter(){
 
 
 
+function unfilter(){
+    var listItems = document.querySelectorAll(".listItem");
+    for(let i of listItems){
+        i.style.display = "";
+    }
+}

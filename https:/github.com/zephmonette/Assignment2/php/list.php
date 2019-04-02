@@ -42,7 +42,7 @@
         <div id = "searchBox" class = "postLoad">
             
             <input type="text" placeholder="Filter..." id="filter">
-            <button id = "filterSub">Go</button>
+            <button id = "filterSub">Go</button> <button id = "unfilter">Reset Filter</button>
             
             </div>
             
