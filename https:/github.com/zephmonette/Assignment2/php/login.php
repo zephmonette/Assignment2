@@ -30,10 +30,13 @@ else { // User exists
 
     if ( password_verify($_POST['password'], $user['password']) && shaCheck($_POST['password'], $user['salt'], $user['password_sha256']) ) {
         
+        $_SESSION['picture'] = $user['id'];
         $_SESSION['email'] = $user['email'];
-        $_SESSION['first_name'] = $user['first_name'];
-        $_SESSION['last_name'] = $user['last_name'];
+        $_SESSION['first_name'] = $user['firstname'];
+        $_SESSION['last_name'] = $user['lastname'];
         $_SESSION['active'] = $user['active'];
+        $_SESSION['city'] = $user['city'];
+        $_SESSION['country'] = $user['country'];
         
         // This is how we'll know the user is logged in
         $_SESSION['logged_in'] = true;

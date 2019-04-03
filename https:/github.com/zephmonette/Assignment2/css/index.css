@@ -51,6 +51,36 @@ body{
     background-color: white;
     padding: 10px;
     border-radius: 0px 0px 10px 10px;
+    padding-bottom: 2px;
+    padding-top: 2px;
+}
+
+#login label{
+    display: block;
+}
+
+#login input{
+    display: block;
+    text-align: center;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px 10px 10px 10px ;
+    border-radius: 5px;
+}
+
+#new label{
+    display: block;
+}
+
+#new input{
+    display: block;
+    text-align: center;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 10px 10px 10px 10px ;
+    border-radius: 5px;
 }
 
 form{
@@ -71,7 +101,7 @@ button{
   text-align: center;
   margin-left: 10px;
   margin-right: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 #links a{
@@ -91,6 +121,7 @@ button{
     padding: 10px;
     text-align: center;
     padding-top: 30px;
+    padding-bottom: 4px;
 }
 
 #login{

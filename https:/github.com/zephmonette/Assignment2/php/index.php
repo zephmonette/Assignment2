@@ -55,19 +55,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
         <div>
             <h3>Login: </h3>
             <label>
-                Email Address<span class="req">*</span>
+                Email Address:<span class="req">*</span>
             </label>
             <input type="email" required autocomplete="off" name="email" />
         </div>
 
         <div>
             <label>
-                Password<span class="req">*</span>
+                Password:<span class="req">*</span>
             </label>
             <input type="password" required autocomplete="off" name="password" />
         </div>
-
-        <p class="forgot"><a href="forgot.php">Forgot Password?</a></p>
 
         <button class="button button-block" name="login" />Log In</button>
 
@@ -79,14 +77,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
             <h3>Register Here: </h3>
             <div>
                 <label>
-                    First Name<span class="req">*</span>
+                    First Name:<span class="req">*</span>
                 </label>
                 <input type="text" required autocomplete="off" name='firstname' />
             </div>
 
             <div>
                 <label>
-                    Last Name<span class="req">*</span>
+                    Last Name:<span class="req">*</span>
                 </label>
                 <input type="text" required autocomplete="off" name='lastname' />
             </div>
@@ -94,35 +92,35 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 
         <div>
             <label>
-                City<span class="req">*</span>
+                City:<span class="req">*</span>
             </label>
             <input type="text" required autocomplete="off" name='city' />
         </div>
         
         <div>
             <label>
-                Country<span class="req">*</span>
+                Country:<span class="req">*</span>
             </label>
             <input type="text" required autocomplete="off" name='country' />
         </div>
 
         <div>
             <label>
-                Email Address<span class="req">*</span>
+                Email Address:<span class="req">*</span>
             </label>
             <input type="email" required autocomplete="off" name='email' />
         </div>
 
         <div>
             <label>
-                Set A Password<span class="req">*</span>
+                Set A Password:<span class="req">*</span>
             </label>
             <input type="password" required autocomplete="off" name='password' id='password'/>
         </div>
         
         <div>
             <label>
-                Confirm password<span class="req">*</span>
+                Confirm password:<span class="req">*</span>
             </label>
             <input type="password" required autocomplete="off" name='password' id='confirm_password'/>
             <span id='message'></span>
