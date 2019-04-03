@@ -12,6 +12,7 @@ h1{
 .links{
     background-color: #FFFFFF;
     border-radius: 10px;
+    
 }
 
 h2{
@@ -37,7 +38,7 @@ a{
     color: #C51162;
 }
 
-.links a:hover{
+a:hover{
     color: #B00020;
     font-style: italic;
 }
@@ -56,6 +57,33 @@ form{
     text-align: center;
 }
 
+button{
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  color: #C51162;
+  width: 150px;
+  border-radius: 5px;
+  text-align: center;
+  margin-left: 10px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+#links a{
+    padding-left: 20px;
+    padding-right:20px;
+    border-radius: 4px;
+    padding: 10px;
+    margin-left: 40px;
+    margin-right:40px;
+    margin: 10px;
+    
+}
 
 .menu{
     background-color: white;
@@ -72,20 +100,3 @@ form{
 #new{
     display: none;
 }
-
-button{
-    border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  color: #C51162;
-  width: 150px;
-  border-radius: 5px;
-  text-align: center;
-  margin-left: 10px;
-  margin-right: 20px;
-}
-    

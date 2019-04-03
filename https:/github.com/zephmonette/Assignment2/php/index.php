@@ -27,28 +27,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
     }
 }
 ?>
-<script src="../js/nav.js"></script>
+<script src="../js/login.js"></script>
 <script src="../js/form.js"></script>
 <body>
-    <!--
+
     <div class="topnav">
         <a href="#home" class="active">Logo</a>
-        <div id="links">
-            <a href="index.php">Home</a>
-            <a href="about.html">About</a>
-            <a href="list.php">Companies</a>
-            <a href="portfolio.php">Portfolio</a>
-            <a href="profile.php">Profile</a>
-            <a href="favourites.php">Favourites</a>
-        </div>
-        <a class="icon">
-            <i class="fa fa-bars"></i>
-        </a>
+        
+        
     </div>
-    -->
+
     
     <div>
-        <h1>Welcome to [ENTER NAME HERE].com</h1>
+        <h1>Welcome to Stocks N Such</h1>
     </div>
     
     <div class= 'menu'>

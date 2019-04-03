@@ -5,6 +5,10 @@
   padding: 10px;
   padding-right: 25px;
   background-color: white;
+  padding-top: 20px;
+    padding-bottom: 20px;
+}
+.topnav #links{
   text-align: center;
 }
 
@@ -13,9 +17,11 @@
 }
 
 #links{
+  color: black;
   display: block;
   background-color: white;
 }
+
 
 }
 
@@ -59,4 +65,5 @@
   background-color: #3CAEA3;
   padding-bottom: 20px;
 }
+
 }

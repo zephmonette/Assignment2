@@ -25,11 +25,13 @@ ul{
 #filter{
     padding: 14px;
     border-radius: 3px;
+    padding-right: 10px;
+    margin-right: 20px;
 }
 
 #itemList{
     height: 650px;
-    width: 500px;
+    width: 425px;
     border: 1px solid black;
     overflow: auto;
     background-color: white;

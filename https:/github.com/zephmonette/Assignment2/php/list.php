@@ -5,23 +5,25 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="/https:/github.com/zephmonette/Assignment2/css/list.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel='stylesheet' href='../css/nav.css'>
         <link rel="stylesheet" href="../css/index.css">
         <script src="/https:/github.com/zephmonette/Assignment2/js/list.js"></script>
          <title>List</title>
          <meta charset="UTF-8"> 
     </head>
+    <script src="../js/nav.js"></script>
     <body>
         
-            <div class="topnav">
+        <div class="topnav">
         <a href="#home" class="active">Logo</a>
         <div id="links">
-            <button><a href="index.php">Home</a></button>
-            <button><a href="about.php">About</a></button>
-            <button><a href="list.php">Companies</a></button>
-            <button><a href="portfolio.php">Portfolio</a></button>
-            <button><a href="profile.php">Profile</a></button>
-            <button><a href="favourites.php">Favourites</a></button>
+            <a href="index.php">Home</a>
+            <a href="about.php">About</a>
+            <a href="list.php">Companies</a>
+            <a href="portfolio.php">Portfolio</a>
+            <a href="profile.php">Profile</a>
+            <a href="favourites.php">Favourites</a>
             <?php
             require('logoutnav.php')
             ?>
