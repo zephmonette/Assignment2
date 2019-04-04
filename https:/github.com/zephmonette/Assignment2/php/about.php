@@ -47,6 +47,11 @@ session_start();
         <h2> <a href= "https://github.com/zephmonette/Assignment2">Link to our Github Repository</a></h2>
     </div>
     
+    <div id= 'message'>
+        <h4>About Our Company</h4>
+        <p id= 'desc'>We are a multinational banking corporation that made billions out of bankrupting the Canadian people, went bankrupt ourselves, then got the Canadian people to bail us out. We're that classy.</p>
+    </div>
+    
 </body>
 
 </html>
