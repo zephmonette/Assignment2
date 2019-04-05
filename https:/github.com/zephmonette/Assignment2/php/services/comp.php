@@ -2,11 +2,13 @@
 
 
 <?php
-try {
- $pdo = new PDO(DBCONNSTRING,DBUSER,DBPASS);
+
+function getData($symbol){
+ 
+  $pdo = new PDO(DBCONNSTRING,DBUSER,DBPASS);
  $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
  
- $sql = "SELECT * FROM companies ";
+ $sql = "SELECT * FROM companies where symbol= '". $symbol. "'";
  $result = $pdo->query($sql);
  
  
@@ -16,11 +18,7 @@ try {
   $dbData[]= $row;
  }
  
-echo json_encode($dbData);
- 
-}
-catch (PDOException $e) {
- die( $e->getMessage() );
+ return $dbData;
 }
 
 ?>

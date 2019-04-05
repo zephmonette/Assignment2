@@ -3,7 +3,6 @@
     
     if(isset($_GET['symbol'])){
         $symbol= $_GET['symbol'];
-        echo $symbol;
     }
 ?>
 <!DOCTYPE html>
@@ -37,6 +36,23 @@
         
         <div>
             <h1>Single Company</h1>
+        </div>
+        
+        <div id= 'compinfo'>
+            <?php
+                require ('services/comp.php');
+                $compData= array();
+                $compData= getData($symbol);
+                $values= $compData[0];
+                    foreach($values as $i){
+                        echo '<div>'.$i.'</div>';
+                    }
+                
+                
+                echo "<img src= '/https:/github.com/zephmonette/Assignment2/logos/". $symbol. ".svg' alt= 'logo' id= 'comlogo'>";
+            
+            ?>
+            
         </div>
         
         
