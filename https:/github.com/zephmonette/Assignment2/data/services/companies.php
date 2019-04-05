@@ -17,6 +17,7 @@ try {
  }
  
 echo json_encode($dbData);
+$pdo= null;
  
 }
 catch (PDOException $e) {

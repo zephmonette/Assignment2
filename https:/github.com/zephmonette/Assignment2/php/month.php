@@ -1,5 +1,9 @@
 <?php
 session_start();
+
+if(isset($_GET['symbol'])){
+        $symbol= $_GET['symbol'];
+    }
 ?>
 <!DOCTYPE html>
 <html>
@@ -11,9 +15,11 @@ session_start();
     <link rel='stylesheet' href='../css/nav.css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/month.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
 <script src="../js/nav.js"></script>
+<script src="../js/table.js"></script>
 
 <body>
     <div class="topnav">
@@ -23,9 +29,7 @@ session_start();
             <a href="about.php">About</a>
             <a href="list.php">Companies</a>
             <?php
-            require('showmenu.php');
-            require('logoutnav.php');
-            require('single-company.php');
+                require('showmenu.php');
             ?>
         </div>
         <a class="icon">
@@ -36,7 +40,6 @@ session_start();
     <div>
         <section>
             <h1>Monthly Stock Data</h1>
-            <h3 id="chartView">View Charts</h3>
             <table id="stockTable">
                 <tr>
                     <th id="date"><a href="">Date</a></th>
@@ -47,11 +50,7 @@ session_start();
                     <th id="volume"><a href="">Volume</a></th>
                 </tr>
                 <tbody id="update">
-                    <?php
-                        
-                    
-                    
-                    ?>
+                       
                 </tbody>
             </table>
         </section>
