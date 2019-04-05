@@ -23,11 +23,8 @@ session_start();
             <a href="index.php">Home</a>
             <a href="about.php">About</a>
             <a href="list.php">Companies</a>
-            <a href="portfolio.php">Portfolio</a>
-            <a href="profile.php">Profile</a>
-            <a href="favourites.php">Favourites</a>
             <?php
-            require('logoutnav.php')
+            require('showmenu.php');
             ?>
         </div>
         <a class="icon">
@@ -47,11 +44,15 @@ session_start();
         <h2> <a href= "https://github.com/zephmonette/Assignment2">Link to our Github Repository</a></h2>
     </div>
     
-    <div id= 'message'>
-        <h4>About Our Company</h4>
-        <p id= 'desc'>We are a multinational banking corporation that made billions out of bankrupting the Canadian people, went bankrupt ourselves, then got the Canadian people to bail us out. We're that classy.</p>
-    </div>
     
 </body>
+
+<footer>
+    <div id= 'footy'>About Our Site:</div>
+    <p>Comp 3512</p>
+    <p>Mount Royal University</p>
+    <p>Randy Connelly</p>
+    <p>Winter 2019 Semester</p>
+</footer>
 
 </html>

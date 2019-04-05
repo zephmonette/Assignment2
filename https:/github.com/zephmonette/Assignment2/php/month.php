@@ -17,13 +17,15 @@ session_start();
 
 <body>
     <div class="topnav">
-        <a href="#home" class="active">Logo</a>
+        <a href="index.php" class="active">Logo</a>
         <div id="links">
             <a href="index.php">Home</a>
             <a href="about.php">About</a>
             <a href="list.php">Companies</a>
             <?php
             require('showmenu.php');
+            require('logoutnav.php');
+            require('single-company.php');
             ?>
         </div>
         <a class="icon">
@@ -32,7 +34,27 @@ session_start();
     </div>
         
     <div>
-        <h1>Portfolio</h1>
+        <section>
+            <h1>Monthly Stock Data</h1>
+            <h3 id="chartView">View Charts</h3>
+            <table id="stockTable">
+                <tr>
+                    <th id="date"><a href="">Date</a></th>
+                    <th id="open"><a href="">Open</a></th>
+                    <th id="close"><a href="">Close</a></th>
+                    <th id="high"><a href="">High</a></th>
+                    <th id="low"><a href="">Low</a></th>
+                    <th id="volume"><a href="">Volume</a></th>
+                </tr>
+                <tbody id="update">
+                    <?php
+                        
+                    
+                    
+                    ?>
+                </tbody>
+            </table>
+        </section>
     </div>
     
 </body>

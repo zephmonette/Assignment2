@@ -22,11 +22,8 @@ session_start();
             <a href="index.php">Home</a>
             <a href="about.php">About</a>
             <a href="list.php">Companies</a>
-            <a href="portfolio.php">Portfolio</a>
-            <a href="profile.php">Profile</a>
-            <a href="favourites.php">Favourites</a>
             <?php
-            require('logoutnav.php')
+            require('showmenu.php');
             ?>
         </div>
         <a class="icon">
@@ -35,7 +32,7 @@ session_start();
     </div>
         
     <div>
-        <h1>favourites</h1>
+        <h1>Favourites</h1>
     </div>
     
 </body>

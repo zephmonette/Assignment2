@@ -23,11 +23,8 @@ session_start();
             <a href="index.php">Home</a>
             <a href="about.php">About</a>
             <a href="list.php">Companies</a>
-            <a href="portfolio.php">Portfolio</a>
-            <a href="profile.php">Profile</a>
-            <a href="favourites.php">Favourites</a>
             <?php
-            require('logoutnav.php')
+            require('showmenu.php');
             ?>
         </div>
         <a class="icon">

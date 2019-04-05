@@ -16,7 +16,7 @@ $email = $_POST['email'];
 
 try {
 
- $stmt1 = $pdo->prepare('SELECT * FROM users WHERE email = :email');
+ $stmt1 = $pdo->prepare('SELECT password, salt, password_sha256 FROM users WHERE email = :email');
  $stmt1->bindValue(':email', $email);
  $stmt1->execute();
 
@@ -25,18 +25,25 @@ if ( $stmt1->rowCount() == 0 ){ // User doesn't exist
 header("location: error.php");
     exit();
 }
-else { // User exists
+else { // User email exists
     $user = $stmt1->fetch(PDO::FETCH_ASSOC);
 
+    
     if ( password_verify($_POST['password'], $user['password']) && shaCheck($_POST['password'], $user['salt'], $user['password_sha256']) ) {
         
-        $_SESSION['picture'] = $user['id'];
-        $_SESSION['email'] = $user['email'];
-        $_SESSION['first_name'] = $user['firstname'];
-        $_SESSION['last_name'] = $user['lastname'];
-        $_SESSION['active'] = $user['active'];
-        $_SESSION['city'] = $user['city'];
-        $_SESSION['country'] = $user['country'];
+         $stmt2 = $pdo->prepare('SELECT * FROM users WHERE email = :email');
+         $stmt2->bindValue(':email', $email);
+         $stmt2->execute();
+         
+        $user1 = $stmt2->fetch(PDO::FETCH_ASSOC);
+        
+        $_SESSION['picture'] = $user1['id'];
+        $_SESSION['email'] = $user1['email'];
+        $_SESSION['first_name'] = $user1['firstname'];
+        $_SESSION['last_name'] = $user1['lastname'];
+        $_SESSION['active'] = $user1['active'];
+        $_SESSION['city'] = $user1['city'];
+        $_SESSION['country'] = $user1['country'];
         
         // This is how we'll know the user is logged in
         $_SESSION['logged_in'] = true;

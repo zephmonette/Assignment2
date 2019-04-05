@@ -16,7 +16,7 @@ for(let p of pre){
             
             api.then(((companies) => {return companies.json()}))
             .then((companies)=>{
-                console.log(companies);
+                //console.log(companies);
                 for(let c of companies){
                                 var txtName = document.createTextNode(" " + c.name + " ");
                                 var txtSym = document.createTextNode(" (" + c.symbol+ ")");
@@ -38,6 +38,8 @@ img.addEventListener('mouseover', function(t){
   movePic(x,y);
   
 });
+
+
 img.addEventListener('mouseout', function(){
     
     killPic();
@@ -51,7 +53,11 @@ img.addEventListener('mousemove', function(t){
             companyListItem.appendChild(img);
             companyListItem.appendChild(txtName);
             companyListItem.appendChild(txtSym);
-        list.appendChild(companyListItem);
+            let link= document.createElement('a');
+            let string= 'single-company.php?symbol='+c.symbol;
+            link.setAttribute('href', string);
+            link.appendChild(companyListItem);
+        list.appendChild(link);
                 }
             });
             

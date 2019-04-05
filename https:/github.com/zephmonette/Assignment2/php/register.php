@@ -25,7 +25,7 @@ try {
  $stmt1->bindValue(':email', $email);
  $stmt1->execute();
  
- //User exists then mesage error is displayed on error page 
+ //User exists then message error is displayed on error page 
  if($stmt1->rowCount() > 0){
      $_SESSION['message'] = 'User with this email already exists.';
 header("location: error.php");
