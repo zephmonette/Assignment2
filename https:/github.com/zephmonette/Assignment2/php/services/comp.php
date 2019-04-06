@@ -35,4 +35,23 @@ $pdo = new PDO(DBCONNSTRING,DBUSER,DBPASS);
     
 }
 
+function name($symbol){
+  $pdo = new PDO(DBCONNSTRING,DBUSER,DBPASS);
+ $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+ 
+ $sql = "SELECT name FROM companies where symbol= '". $symbol. "'";
+ $result = $pdo->query($sql);
+ 
+ 
+ $dbData= array();
+ 
+ while($row = $result->fetch()){
+  $dbData[]= $row;
+ }
+ 
+ $pdo= null;
+ 
+ return $dbData;
+}
+
 ?>

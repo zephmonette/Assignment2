@@ -180,3 +180,41 @@ footer{
 #change{
     display: none;
 }
+
+#favlist{
+    background-color: white;
+    border-radius: 5px;
+    padding-bottom: 60px;
+}
+
+#icon{
+    width: 175px;
+}
+
+#me{
+    display: inline;
+    margin-right: 5px;
+}
+
+#fav{
+    padding: 10px;
+}
+
+#pic{
+    display: inline-block;
+    margin-right: 25px;
+}
+
+#favlist button{
+    width: 90px;
+    padding: 9px;
+    float: right;
+}
+
+#none{
+    text-align: center;
+}
+
+#fav:first-child{
+    display: none;
+}

@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -33,6 +34,33 @@ session_start();
         
     <div>
         <h1>Favourites</h1>
+    </div>
+    
+    <div id= "favlist">
+        <?php
+        require ('services/comp.php');
+        
+        if(!empty($_SESSION['favorites'])){
+        foreach($_SESSION['favorites'] as $symbol){
+            
+            echo '<div id= "fav">';
+            echo '<div id= "pic"><img src= "/https:/github.com/zephmonette/Assignment2/logos/'.$symbol. '.svg" id= "icon"></div>';
+            echo '<a href="single-company.php?symbol='.$symbol.'" id= "me">('.$symbol. ')</a>';
+            
+            $name= name($symbol);
+            foreach($name as $string){
+                echo '<a href="single-company.php?symbol='.$symbol.'" id= "me" >'.$string[0]. '</a>';
+            }
+            
+            echo '<button type="button" id= "rem"><a href= "remfav.php?symbol='.$symbol. '">Remove</a></button>';
+            echo '</div>';
+        }
+        echo '<div><button type="button" id= "all"><a href= "remall.php">Remove All</button></div>';
+        }
+        else{
+            echo "<p id= 'none'>You have no favorites.</p>";
+        }
+        ?>
     </div>
     
 </body>

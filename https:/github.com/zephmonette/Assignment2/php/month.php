@@ -37,9 +37,10 @@ if(isset($_GET['symbol'])){
         </a>
     </div>
         
-    <div>
+    <div class="stockNav">
         <section>
             <h1>Monthly Stock Data</h1>
+            <h2 id="cSymbol"><?php echo $symbol ?></h2>
             <table id="stockTable">
                 <tr>
                     <th id="date"><a href="">Date</a></th>

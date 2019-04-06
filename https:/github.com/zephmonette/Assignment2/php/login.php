@@ -44,6 +44,7 @@ else { // User email exists
         $_SESSION['active'] = $user1['active'];
         $_SESSION['city'] = $user1['city'];
         $_SESSION['country'] = $user1['country'];
+        $_SESSION['favorites']= $user1['favorites'];
         
         // This is how we'll know the user is logged in
         $_SESSION['logged_in'] = true;

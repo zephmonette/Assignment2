@@ -1,0 +1,30 @@
+/* Monthly Stock Data */
+h2 {
+    color: white;
+    border: none;
+    text-align: center;
+}
+table {
+    height: 300px;
+    width: 595px;
+    overflow: scroll;
+    border: 3px solid black;
+    margin: auto;
+    background-color: white;
+    border-radius: 7px;
+    border-collapse: collapse; 
+}
+
+th {
+    text-decoration: underline;
+    border-bottom: solid;
+}
+
+td{
+    border:1px solid;
+    margin: 0px;
+}
+
+#stockTable{
+    text-align: left;
+}

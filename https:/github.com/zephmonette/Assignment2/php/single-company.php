@@ -4,6 +4,7 @@
     if(isset($_GET['symbol'])){
         $symbol= $_GET['symbol'];
     }
+    
 ?>
 <!DOCTYPE html>
 <html>
@@ -111,10 +112,11 @@
             </div>
             
             <button type="button" id='edit'>Edit</button>
-            <button type="button" id='fav'>Favorite</button>
             <?php
+            $link= "addfav.php?symbol=". $_GET['symbol'];
+            echo '<button type="button" id="fav"><a href= "'.$link. '">Favorite</a></button>';
             $link= "month.php?symbol=". $_GET['symbol'];
-            echo '<button type="button" id="stock"><a href= "'.$link. '">Stock Data</a></button>'
+            echo '<button type="button" id="stock"><a href= "'.$link. '">Stock Data</a></button>';
             ?>
             
         </div>

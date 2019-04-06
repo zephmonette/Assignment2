@@ -18,6 +18,8 @@
         other.style.display= 'block';
     });
     
+    
+    
     document.querySelector('#cancel').addEventListener('click', () =>{
         
         let other= document.querySelector('#edit');
