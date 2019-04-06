@@ -1,36 +1,51 @@
-.smallPic{
-    height: 30px;
-    width: 85px;
-}
+/*.smallPic{*/
+/*    height: 30px;*/
+/*    width: 85px;*/
+/*}*/
 
-ul{
-    list-style-type: none;
-    padding: 0px;
-    margin: 0px;
-    display: block;
-    text-align: center;
-    margin: auto;
-    border-radius: 5px;
-}
+/*ul{*/
+/*    list-style-type: none;*/
+/*    padding: 0px;*/
+/*    margin: 0px;*/
+/*    display: block;*/
+/*    text-align: center;*/
+/*    margin: auto;*/
+/*    border-radius: 5px;*/
+/*}*/
 
-#itemList{
-    height: 650px;
-    width: 425px;
-    border: 1px solid black;
-    overflow: auto;
-    background-color: white;
-}
+/*#itemList{*/
+/*    height: 650px;*/
+/*    width: 425px;*/
+/*    border: 1px solid black;*/
+/*    overflow: auto;*/
+/*    background-color: white;*/
+/*}*/
 
-#itemList li {
-    border-top: 1px solid;
-    height: 50px;
-    padding-left: 5px;
-    text-align: left;
+/*#itemList li {*/
+/*    border-top: 1px solid;*/
+/*    height: 50px;*/
+/*    padding-left: 5px;*/
+/*    text-align: left;*/
     
+/*}*/
+
+/*#mouse img{*/
+/*  position: absolute; */
+/*  width: 150px; */
+/*  height: 150px; */
+/*}*/
+
+select, input, label {
+    display: block;
 }
 
-#mouse img{
-  position: absolute; 
-  width: 150px; 
-  height: 150px; 
+label {
+    color: white;
 }
+
+form label{
+    text-align: left;
+}
+/*#companyform {*/
+/*    display: block;*/
+/*}*/

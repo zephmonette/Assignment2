@@ -1,26 +1,19 @@
 <?php
     session_start();
-    
-    if(isset($_GET['symbol'])){
-        $symbol= $_GET['symbol'];
-    }
-    
 ?>
 <!DOCTYPE html>
 <html>
 
-<head>
-    <meta charset='utf-8' />
-    <title>Index</title>
-  <!--   <link rel='stylesheet' href='../css/index.css'> -->
-    <link rel='stylesheet' href='css/nav.css'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/index.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-
-</head>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/portfolioList.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel='stylesheet' href='css/nav.css'>
+        <link rel="stylesheet" href="css/index.css">
+         <title>List</title>
+         <meta charset="UTF-8"> 
+    </head>
 <script src="../js/nav.js"></script>
-   <script src="js/portfolio.js"></script>
+<script src="/https:/github.com/zephmonette/Assignment2/js/portfolio.js"></script>
 
 <body>
     <div class="topnav">
@@ -37,11 +30,16 @@
             <i class="fa fa-bars"></i>
         </a>
     </div>
-    
+
     <div id="companyForm">
         <form action="portfolio.php" method="get">
+            <label> Select A Company: </label>
+            <select name="itemList">
+
+            </select>
+            
             <label> How many stocks:</label>
-            <input type="text" name="<?php echo $symbol ?>"><br>
+            <input type="text" name="stockNum"/>
             <input type="submit" value="Submit">
         </form>
     </div>

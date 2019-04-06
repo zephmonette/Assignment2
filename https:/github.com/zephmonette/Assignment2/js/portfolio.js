@@ -3,7 +3,7 @@
 console.log("confirm");
 
 window.addEventListener('load', function() {
-    var list = document.getElementById("itemList");
+    var list = document.querySelector("select");
 
     var api = fetch('/https:/github.com/zephmonette/Assignment2/data/services/companies.php');
 
@@ -11,12 +11,14 @@ window.addEventListener('load', function() {
         .then((companies) => {
             //console.log(companies);
             for (let c of companies) {
+                //let opt = document.createElement("option");
                 var txtName = document.createTextNode(" " + c.name + " ");
                 var txtSym = document.createTextNode(" (" + c.symbol + ")");
-                var companyListItem = document.createElement('li');
-                companyListItem.setAttribute("id", c.symbol);
+                var companyListItem = document.createElement('option');
+                //companyListItem.setAttribute("id", c.symbol);
+                companyListItem.setAttribute("value", c.symbol);
                 //console.log(companyListItem.id);
-                companyListItem.setAttribute("class", "listItem");
+                //companyListItem.setAttribute("class", "listItem");
                 var img = document.createElement('img');
                 img.setAttribute("src", "/https:/github.com/zephmonette/Assignment2/logos/" + c.symbol + ".svg");
                 img.setAttribute("alt", c.symbol);
@@ -25,21 +27,26 @@ window.addEventListener('load', function() {
                 companyListItem.appendChild(img);
                 companyListItem.appendChild(txtName);
                 companyListItem.appendChild(txtSym);
-                let link = document.createElement('a');
-                let string = 'portfolio.form.php?symbol=' + c.symbol;
-                link.setAttribute('href', string);
-                link.appendChild(companyListItem);
-                list.appendChild(link);
+                // let link = document.createElement('a');
+                // let string = 'portfolio.php?symbol=' + c.symbol;
+                // link.setAttribute('href', string);
+                // link.appendChild(companyListItem);
+                //opt.appendChild(companyListItem);
+                list.appendChild(companyListItem);
             }
-            document.querySelector("a").addEventListener('click', function() {
+            document.querySelector("li.listItem").addEventListener('click', function() {
                     document.querySelector("table").style.display = "block";
                     document.querySelector("selectionList").style.display = "none";
-                    let row = document.createElement("tr");
-                    let col = document.createElement("th");
-                    let symbolimg = document.createElement("img");
-                    symbolimg.setAttribute("src", "/https:/github.com/zephmonette/Assignment2/logos/" + c.symbol + ".svg");
-                    symbolimg.setAttribute("alt", c.symbol);
-                    symbolimg.setAttribute("class", "smallPic");
+                    // let row = document.createElement("tr");
+                    // let col = document.createElement("td");
+                    // let symbolimg = document.createElement("img");
+                    
+                    // col.appendChild(symbolimg)
+                    // row.appendChild(col)
+                    
+                    // let col2 = document.createElement("td");
+                    // let cSymbol = document.getElementByClassName("listItem").getAttribute("href");
+                    
             });
         });
 
