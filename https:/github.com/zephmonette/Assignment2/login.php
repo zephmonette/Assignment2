@@ -1,7 +1,7 @@
 <?php
 session_start();
 /* User login process, checks if user exists and password is correct */
-require_once('../data/services/pdo.php');
+require_once('data/services/pdo.php');
 
 function shaCheck($pass,$salt,$hash){
     if(hash(sha256,$pass . $salt) == $hash){

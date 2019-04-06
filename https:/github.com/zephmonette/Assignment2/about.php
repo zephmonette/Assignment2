@@ -9,12 +9,12 @@ session_start();
     <meta charset='utf-8' />
     <title>Index</title>
   <!--   <link rel='stylesheet' href='../css/index.css'> -->
-    <link rel='stylesheet' href='../css/nav.css'>
+    <link rel='stylesheet' href='css/nav.css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="css/index.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
-<script src="../js/nav.js"></script>
+<script src="js/nav.js"></script>
 
 <body>
     <div class="topnav">
@@ -54,5 +54,4 @@ session_start();
     <p>Randy Connelly</p>
     <p>Winter 2019 Semester</p>
 </footer>
-
 </html>

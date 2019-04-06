@@ -9,10 +9,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="/https:/github.com/zephmonette/Assignment2/css/list.css">
+        <link rel="stylesheet" type="text/css" href="css/list.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel='stylesheet' href='../css/nav.css'>
-        <link rel="stylesheet" href="../css/index.css">
+        <link rel='stylesheet' href='css/nav.css'>
+        <link rel="stylesheet" href="css/index.css">
         <script src="/https:/github.com/zephmonette/Assignment2/js/list.js"></script>
          <title>Single Company</title>
          <meta charset="UTF-8"> 

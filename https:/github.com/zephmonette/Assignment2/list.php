@@ -4,11 +4,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="/https:/github.com/zephmonette/Assignment2/css/list.css">
+        <link rel="stylesheet" type="text/css" href="css/list.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel='stylesheet' href='../css/nav.css'>
-        <link rel="stylesheet" href="../css/index.css">
-        <script src="/https:/github.com/zephmonette/Assignment2/js/list.js"></script>
+        <link rel='stylesheet' href='css/nav.css'>
+        <link rel="stylesheet" href="css/index.css">
+        <script src="js/list.js"></script>
          <title>List</title>
          <meta charset="UTF-8"> 
     </head>
@@ -35,7 +35,7 @@
         </div>
         
         <!--loading gif sourced from https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif-->
-        <img src="/https:/github.com/zephmonette/Assignment2/data/loadgif.gif" id = "preLoad"></img>
+        <img src="data/loadgif.gif" id = "preLoad"></img>
         <div id = "logoContainer" class = "postLoad">
         </div>
         <div id = "searchBox" class = "postLoad">

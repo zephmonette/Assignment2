@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once('../data/services/pdo.php');
+require_once('data/services/pdo.php');
 $_SESSION['email'] = $_POST['email'];
 $_SESSION['first_name'] = $_POST['firstname'];
 $_SESSION['last_name'] = $_POST['lastname'];

@@ -1,5 +1,10 @@
 <?php
-session_start();
+    session_start();
+    
+    if(isset($_GET['symbol'])){
+        $symbol= $_GET['symbol'];
+    }
+    
 ?>
 <!DOCTYPE html>
 <html>
@@ -12,11 +17,10 @@ session_start();
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/index.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link rel="stylesheet" href="../css/portfolio.css">
-    <link rel="stylesheet" href="../css/portfolioList.css">
+
 </head>
 <script src="../js/nav.js"></script>
-   <script src="/https:/github.com/zephmonette/Assignment2/js/portfolio.js"></script>
+<script src="/https:/github.com/zephmonette/Assignment2/js/portfolio.js"></script>
 
 <body>
     <div class="topnav">
@@ -33,38 +37,13 @@ session_start();
             <i class="fa fa-bars"></i>
         </a>
     </div>
-        
-    <div id="portfolio">
-        <section>
-            <h1>Portfolio</h1>
-            <table id="portfolioTable">
-                <tr>
-                    <th></th>
-                    <th>Symbol</th>
-
-                    <th>Name</th>
-                    <th>$ Shares</th>
-                    <th>$ Close</th>
-                    <th>$ Value</th>
-                </tr>
-                <tbody>
-
-                </tbody>
-            </table>
-            <div id="totalValue"></div>
-        </section>
-    </div>
-    <div id = "selectionList">
-        <ul id = "itemList">
-        </ul>
-    </div>
+    
     <div id="companyForm">
-        <form action="/portfolio.php" method="get">
-            <label>How many stocks:</label>
-            <input type="text" name="numStocks"><br>
+        <form action="../php/portfolio.php" method="get">
+            <label> How many stocks:</label>
+            <input type="text" name="<?php echo $symbol ?>"><br>
             <input type="submit" value="Submit">
         </form>
     </div>
 </body>
-
 </html>
