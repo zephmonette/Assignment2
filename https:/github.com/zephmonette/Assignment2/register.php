@@ -6,6 +6,12 @@ $_SESSION['first_name'] = $_POST['firstname'];
 $_SESSION['last_name'] = $_POST['lastname'];
 
 
+$_SESSION['picture'] = 19;
+$_SESSION['email'] = $_POST['email'];
+$_SESSION['first_name'] = $_POST['firstname'];
+$_SESSION['last_name'] = $_POST['lastname'];
+$_SESSION['city'] = $_POST['city'];
+$_SESSION['country'] = $_Post['country'];
 $first_name = $_POST['firstname'];
 $last_name = $_POST['lastname'];
 $city = $_POST['city'];

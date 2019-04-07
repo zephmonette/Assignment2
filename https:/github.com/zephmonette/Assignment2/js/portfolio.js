@@ -30,13 +30,13 @@ window.addEventListener('load', function() {
                 list.appendChild(companyListItem);
             }
             document.querySelector("#addStocks").addEventListener('click', function() {
-                    document.querySelector("form").style.display = "block";
+                    document.getElementById("form").style.display = "block";
                     document.getElementById("stockButton").style.display = "none";
                     document.getElementById("totalValue").style.display = "none";
                     
             });
-            document.querySelector("form").addEventListener('submit', function(){
-                document.querySelector("#form").style.display = 'none';
+            document.getElementById("submitButton").addEventListener('click', function(){
+                document.getElementById("form").style.display = 'none';
                 document.getElementById("totalValue").style.display = "block";
                 document.querySelector("table").style.display = "block";
                 let table = document.getElementById("tableBody");

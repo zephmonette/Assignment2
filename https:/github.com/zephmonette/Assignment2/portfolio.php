@@ -37,6 +37,9 @@ session_start();
         </div>   
     <div id="portfolio">
         <section>
+            <div id= 'warning'>
+        <p>This section is not fully completed</p>
+    </div>
             <table id="portfolioTable">
                 <tr>
                     <th></th>
@@ -47,7 +50,14 @@ session_start();
                     <th>$ Value</th>
                 </tr>
                 <tbody id="tableBody">
-
+                    <tr>
+                        <td></td>
+                        <td>A</td>
+                        <td>Agilent Technologies Inc</td>
+                        <td> 10 shares</td>
+                        <td>$ 81.47 USD</td>
+                        <td>$ 81.19 USD</td>
+                    </tr>
                 </tbody>
             </table>
             <div id="totalValue"></div>
@@ -66,16 +76,17 @@ session_start();
             
         ?>
         <div id='form'>
-            <form method='post' id='add'>
+            
                 <label> Select A Company: </label>
                 <select name="itemList" id="selectValue"></select>
                 <label> How many stocks:</label>
                 <input type="text" name="stockNum" id="inputValue"><br>
                 
-                <input type="submit" value="Submit">
-            </form>
+                <button id = 'submitButton'>Submit</button>
+            
         </div>
     </div>
+    
     
     <div id="stockButton">
         <button type='button' id="addStocks">Add Stocks to Portfolio</button>
