@@ -44,7 +44,7 @@ session_start();
         foreach($_SESSION['favorites'] as $symbol){
             
             echo '<div id= "fav">';
-            echo '<div id= "pic"><img src= "/https:/github.com/zephmonette/Assignment2/logos/'.$symbol. '.svg" id= "icon"></div>';
+            echo '<div id= "pic"><img src= "logos/'.$symbol. '.svg" id= "icon"></div>';
             echo '<a href="single-company.php?symbol='.$symbol.'" id= "me">('.$symbol. ')</a>';
             
             $name= name($symbol);

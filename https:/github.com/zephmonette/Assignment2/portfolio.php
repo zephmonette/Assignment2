@@ -13,8 +13,8 @@ session_start();
          <title>List</title>
          <meta charset="UTF-8"> 
     </head>
-    <script src="/https:/github.com/zephmonette/Assignment2/js/nav.js"></script>
-    <script src="/https:/github.com/zephmonette/Assignment2/js/portfolio.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/portfolio.js"></script>
     <body>
         
         <div class="topnav">
@@ -46,7 +46,7 @@ session_start();
                     <th>$ Close</th>
                     <th>$ Value</th>
                 </tr>
-                <tbody>
+                <tbody id="tableBody">
 
                 </tbody>
             </table>
@@ -56,6 +56,7 @@ session_start();
     
     <div id='formInfo'>
         <?php
+            require ('services/comp.php');
             if(!empty($_POST['itemList']) && !empty($_POST['stockNum'])) {
                 $compName = name($_POST['itemList']);
                 $name = $_POST['itemList'];
@@ -67,9 +68,9 @@ session_start();
         <div id='form'>
             <form method='post' id='add'>
                 <label> Select A Company: </label>
-                <select name="itemList"></select>
+                <select name="itemList" id="selectValue"></select>
                 <label> How many stocks:</label>
-                <input type="text" name="stockNum"><br>
+                <input type="text" name="stockNum" id="inputValue"><br>
                 
                 <input type="submit" value="Submit">
             </form>

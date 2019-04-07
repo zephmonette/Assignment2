@@ -37,31 +37,34 @@ window.addEventListener('load', function() {
             });
             document.querySelector("form").addEventListener('submit', function(){
                 document.querySelector("#form").style.display = 'none';
-                document.querySelector("totalValue").style.display = "block";
+                document.getElementById("totalValue").style.display = "block";
                 document.querySelector("table").style.display = "block";
+                let table = document.getElementById("tableBody");
+                table.style.display = "block";
+                let row = document.createElement("tr");
+                let col = document.createElement("td");
+                let col2 = document.createElement("td");
+                let col3 = document.createElement("td");
+                let col4 = document.createElement("td");
+                let col5 = document.createElement("td");
+                let col6 = document.createElement("td");
+                
+                let symbol = document.getElementById("selectValue").value;
+                console.log(symbol);
+                let num = document.getElementById("inputValue").value;
+                console.log(num);
+                col2.innerHTML = symbol;
+                col3.innerHTML = num;
+                
+                row.appendChild(col);
+                row.appendChild(col2);
+                row.appendChild(col3);
+                row.appendChild(col4);
+                row.appendChild(col5);
+                row.appendChild(col6);
+                table.appendChild(row);
             });
         });
-        
-        function addToStockList(array, name, stockNumber){
-            let row = document.createElement("tr");
-            let col = document.createElement("td");
-            let col2 = document.createElement("td");
-            let col3 = document.createElement("td");
-            let col4 = document.createElement("td");
-            let col5 = document.createElement("td");
-            let col6 = document.createElement("td");
-            
-            col4.textContent = stockNumber;
-            col3.textContent = name;
-            col2.textContent = array;
-            col6.textContent = "";
-            row.appendChild(col);
-            row.appendChild(col2);
-            row.appendChild(col3);
-            row.appendChild(col4);
-            row.appendChild(col5);
-            row.appendChild(col6);
-        }
 });
 
            

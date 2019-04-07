@@ -39,7 +39,7 @@ session_start();
     <div class= "links">
         <h2>Zephaniah Monette:  <a href= "https://github.com/zephmonette">Link to my Github</a></h2>
         <h2>Tristen Meilleur: <a href='https://github.com/tmeil781'>Link to my Github</a></h2>
-        <h2>Bryce Baker: <a href= "github go here">Link to my Github</a></h1>
+        <h2>Bryce Baker: <a href= "https://github.com/BBaker95">Link to my Github</a></h1>
         <h2>Paulina Wynter: <a href= "https://github.com/paulinawynter">Link to my Github</a></h1>
         <h2> <a href= "https://github.com/zephmonette/Assignment2">Link to our Github Repository</a></h2>
     </div>
