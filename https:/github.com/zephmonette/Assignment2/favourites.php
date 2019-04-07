@@ -18,7 +18,7 @@ session_start();
 
 <body>
     <div class="topnav">
-        <a href="index.php" class="active">Logo</a>
+        <a href="index.php" class="active">Stocks N Such</a>
         <div id="links">
             <a href="index.php">Home</a>
             <a href="about.php">About</a>

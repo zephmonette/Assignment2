@@ -17,7 +17,7 @@
 
 <body>
     <div class="topnav">
-        <a href="#home" class="active">Logo</a>
+        <a href="#home" class="active">Stocks N Such</a>
         <div id="links">
             <a href="index.php">Home</a>
             <a href="about.php">About</a>
@@ -30,7 +30,7 @@
             <i class="fa fa-bars"></i>
         </a>
     </div>
-
+    
     <div id="companyForm">
         <form action="portfolio.php" method="get">
             <label> Select A Company: </label>
@@ -42,6 +42,16 @@
             <input type="text" name="stockNum"/>
             <input type="submit" value="Submit">
         </form>
+    </div>
+    <div id = "IMTEMPORARYDELETEMEBEFORESUBMITTING">
+        <php?
+        if(isset($_COOKIE[$testCookie])) {
+        echo 'test cookie set';
+        }
+        else{
+        setcookie('testCookie', time()+3600);
+        }
+        ?>
     </div>
 </body>
 </html>

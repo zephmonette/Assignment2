@@ -27,13 +27,26 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
     }
 }
 ?>
-<script src="../js/login.js"></script>
-<script src="../js/form.js"></script>
+<script src="js/login.js"></script>
+<script src="js/form.js"></script>
+<script src="js/nav.js"></script>
 <body>
 
     <div class="topnav">
-        <a href="#home" class="active">Logo</a>
+        <a href="#home" class="active">Stocks N Such</a>
+        <div id= 'links'>
+            <a href="about.php">About</a>
+        <a href="list.php">Companies</a>
+        <?php
+            require('loginmenu.php')
+        ?>
+            
+            
+        </div>
         
+        <a class="icon">
+            <i class="fa fa-bars"></i>
+        </a>
         
     </div>
 
@@ -42,15 +55,26 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
         <h1>Welcome to Stocks N Such</h1>
     </div>
     
-    <div class= 'menu'>
-        <button><a href="about.php">About</a></button>
-        <button><a href="list.php">Companies</a></button>
-        <?php
-            require('loginmenu.php')
-        ?>
-    </div>
     
     <div id= 'formBox'>
+        
+        <div id='opt'>
+        <?php
+        
+        if($_SESSION['logged_in'] == false){
+                
+            echo '<button id= "b1">Login';
+             echo '<button id= "b2">Sign Up</button>';
+        }
+        
+        if($_SESSION['logged_in'] == true){
+            echo "<img src= 'logos/logo_transparent.png' width= '350'>";
+        }
+        
+        ?>
+        
+        
+        </div>
     <form action="index.php" method="post" autocomplete="off" id= "login">
         <div>
             <h3>Login: </h3>

@@ -12,7 +12,7 @@ for(let p of pre){
 }    
   var list = document.getElementById("itemList");
 
-            var api = fetch('/https:/github.com/zephmonette/Assignment2/data/services/companies.php');
+            var api = fetch('data/services/companies.php');
             
             api.then(((companies) => {return companies.json()}))
             .then((companies)=>{
@@ -25,7 +25,7 @@ for(let p of pre){
                                 //console.log(companyListItem.id);
                                 companyListItem.setAttribute("class", "listItem");
             var img = document.createElement('img');
-            img.setAttribute("src", "/https:/github.com/zephmonette/Assignment2/logos/" + c.symbol + ".svg");
+            img.setAttribute("src", "logos/" + c.symbol + ".svg");
             img.setAttribute("alt", c.symbol);
             img.setAttribute("class", "smallPic");
 
@@ -86,7 +86,7 @@ function bigPic(altTxt){
     var mouse = document.getElementById('mouse');   
     //console.log(altTxt);
     var img2 = document.createElement('img');
-    img2.setAttribute("src", "/https:/github.com/zephmonette/Assignment2/logos/" + altTxt + ".svg");
+    img2.setAttribute("src", "logos/" + altTxt + ".svg");
     img2.setAttribute("id", "mousePic");
     mouse.appendChild(img2);
 

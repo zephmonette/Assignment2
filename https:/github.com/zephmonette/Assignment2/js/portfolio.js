@@ -1,6 +1,6 @@
 // JavaScript File
 
-console.log("confirm");
+//console.log("confirm");
 
 window.addEventListener('load', function() {
     var list = document.querySelector("select");
@@ -27,31 +27,41 @@ window.addEventListener('load', function() {
                 companyListItem.appendChild(img);
                 companyListItem.appendChild(txtName);
                 companyListItem.appendChild(txtSym);
-                // let link = document.createElement('a');
-                // let string = 'portfolio.php?symbol=' + c.symbol;
-                // link.setAttribute('href', string);
-                // link.appendChild(companyListItem);
-                //opt.appendChild(companyListItem);
                 list.appendChild(companyListItem);
             }
-            document.querySelector("li.listItem").addEventListener('click', function() {
-                    document.querySelector("table").style.display = "block";
-                    document.querySelector("selectionList").style.display = "none";
-                    // let row = document.createElement("tr");
-                    // let col = document.createElement("td");
-                    // let symbolimg = document.createElement("img");
-                    
-                    // col.appendChild(symbolimg)
-                    // row.appendChild(col)
-                    
-                    // let col2 = document.createElement("td");
-                    // let cSymbol = document.getElementByClassName("listItem").getAttribute("href");
+            document.querySelector("#addStocks").addEventListener('click', function() {
+                    document.querySelector("form").style.display = "block";
+                    document.getElementById("stockButton").style.display = "none";
+                    document.getElementById("totalValue").style.display = "none";
                     
             });
+            document.querySelector("form").addEventListener('submit', function(){
+                document.querySelector("#form").style.display = 'none';
+                document.querySelector("totalValue").style.display = "block";
+                document.querySelector("table").style.display = "block";
+            });
         });
-
-    
-    
+        
+        function addToStockList(array, name, stockNumber){
+            let row = document.createElement("tr");
+            let col = document.createElement("td");
+            let col2 = document.createElement("td");
+            let col3 = document.createElement("td");
+            let col4 = document.createElement("td");
+            let col5 = document.createElement("td");
+            let col6 = document.createElement("td");
+            
+            col4.textContent = stockNumber;
+            col3.textContent = name;
+            col2.textContent = array;
+            col6.textContent = "";
+            row.appendChild(col);
+            row.appendChild(col2);
+            row.appendChild(col3);
+            row.appendChild(col4);
+            row.appendChild(col5);
+            row.appendChild(col6);
+        }
 });
 
            

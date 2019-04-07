@@ -52,7 +52,7 @@ body{
     padding: 10px;
     border-radius: 0px 0px 10px 10px;
     padding-bottom: 2px;
-    padding-top: 2px;
+    padding-top: 5px;
 }
 
 #login label{
@@ -107,7 +107,6 @@ button{
   color: #C51162;
   width: 150px;
   border-radius: 5px;
-  text-align: center;
   margin-left: 10px;
   margin-right: 20px;
   margin-bottom: 10px;
@@ -217,4 +216,9 @@ footer{
 
 #fav:first-child{
     display: none;
+}
+
+#opt{
+    text-align:center;
+    margin: auto;
 }

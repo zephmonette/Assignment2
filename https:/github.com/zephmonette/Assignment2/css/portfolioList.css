@@ -35,9 +35,9 @@
 /*  height: 150px; */
 /*}*/
 
-select, input, label {
-    display: block;
-}
+/*select, input, label {*/
+/*    display: non;*/
+/*}*/
 
 label {
     color: white;
@@ -45,6 +45,10 @@ label {
 
 form label{
     text-align: left;
+}
+
+form {
+    display: none;
 }
 /*#companyform {*/
 /*    display: block;*/

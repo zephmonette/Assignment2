@@ -1,8 +1,5 @@
 <?php
 session_start();
-
-    $symbol= $_GET['itemList'];
-    $number = $_GET['stockNum'];
 ?>
 <!DOCTYPE html>
 <html>
@@ -11,15 +8,17 @@ session_start();
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel='stylesheet' href='css/nav.css'>
         <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/portfolioList.css">
         <script src="js/list.js"></script>
          <title>List</title>
          <meta charset="UTF-8"> 
     </head>
-    <script src="../js/nav.js"></script>
+    <script src="/https:/github.com/zephmonette/Assignment2/js/nav.js"></script>
+    <script src="/https:/github.com/zephmonette/Assignment2/js/portfolio.js"></script>
     <body>
         
         <div class="topnav">
-        <a href="index.php" class="active">Logo</a>
+        <a href="index.php" class="active">Stocks N Such</a>
         <div id="links">
             <a href="index.php">Home</a>
             <a href="about.php">About</a>
@@ -42,7 +41,6 @@ session_start();
                 <tr>
                     <th></th>
                     <th>Symbol</th>
-
                     <th>Name</th>
                     <th>$ Shares</th>
                     <th>$ Close</th>
@@ -55,7 +53,32 @@ session_start();
             <div id="totalValue"></div>
         </section>
     </div>
-    <div id="portfolioForm"><a href="portfolio.form.php">Add Stocks to Portfolio</a></div>    
+    
+    <div id='formInfo'>
+        <?php
+            if(!empty($_POST['itemList']) && !empty($_POST['stockNum'])) {
+                $compName = name($_POST['itemList']);
+                $name = $_POST['itemList'];
+                $number = $_POST['stockNum'];
+                //echo addToStockList($compName, $name, $number);
+            }
+            
+        ?>
+        <div id='form'>
+            <form method='post' id='add'>
+                <label> Select A Company: </label>
+                <select name="itemList"></select>
+                <label> How many stocks:</label>
+                <input type="text" name="stockNum"><br>
+                
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+    
+    <div id="stockButton">
+        <button type='button' id="addStocks">Add Stocks to Portfolio</button>
+    </div>
 </body>
 
 </html>
